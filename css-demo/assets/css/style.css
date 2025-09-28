@@ -1,0 +1,42 @@
+/* CSS Demo Stylesheet */
+
+/*  ---------------Box Sizing-----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/*----------------Global Styles ------------------*/
+
+body{
+    font-family: "Jost", sans-serif;
+}
+
+/* --- Color Combo --- */
+ /* Color Theme Swatches in Hex 
+.WEB-TECH-1-hex { color: #568EBF; }
+.WEB-TECH-2-hex { color: #82B0D9; }
+.WEB-TECH-3-hex { color: #9CC1D9; }
+.WEB-TECH-4-hex { color: #DFEDF2; }
+.WEB-TECH-5-hex { color: #F2E7AC; }
+
+/* Color Theme Swatches in RGBA 
+.WEB-TECH-1-rgba { color: rgba(86, 142, 191, 1); }
+.WEB-TECH-2-rgba { color: rgba(130, 176, 217, 1); }
+.WEB-TECH-3-rgba { color: rgba(156, 193, 217, 1); }
+.WEB-TECH-4-rgba { color: rgba(223, 237, 242, 1); }
+.WEB-TECH-5-rgba { color: rgba(242, 231, 172, 1); }
+
+/* Color Theme Swatches in HSLA 
+.WEB-TECH-1-hsla { color: hsla(208, 45, 54, 1); }
+.WEB-TECH-2-hsla { color: hsla(208, 53, 68, 1); }
+.WEB-TECH-3-hsla { color: hsla(203, 44, 73, 1); }
+.WEB-TECH-4-hsla { color: hsla(195, 42, 91, 1); }
+.WEB-TECH-5-hsla { color: hsla(50, 72, 81, 1); }
+*/
