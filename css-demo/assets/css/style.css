@@ -10,11 +10,20 @@ html {
   box-sizing: inherit;
 }
 
+/*   Utility Classes */
+.container{
+width:80vw;
+margin-left:20px auto;
+}
 
-/*----------------Global Styles ------------------*/
+/* Responsive Images */
+img{
+  max-width:100%;
+}
+
+/*----------------Global Styles------------------*/
 body{
-    font-family: "Dosis", sans-serif;
-    margin:0;
+  font-family: "Inconsolata", monospace;
 }
 
 header.primary{
@@ -22,17 +31,26 @@ header.primary{
   text-align:center;
   text-shadow: 1px 2px #0000;
   color:#ffff;
-  /* single line */
-  padding: 40px;
+      /* single value shorthand */
+      padding: 40px;
+      /* long form */
+      padding-top: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      padding-left: 40px;
+      /* T, R, B, L */
+      padding: 20px 40px 20px 40px;
+      /* Two value Top/Bottom */
+      padding: 20px 40px;
 }
 
 header.primary h1{
   font-weight:bold;
   font-size: 2.4rem;
-  margin:10px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
-header.primary hi a{
+header.primary h1 a{
 color:#ffff;
 text-decoration:none;
 }
@@ -45,11 +63,56 @@ header.primary h2{
 
 header.primary nav ul{
 padding:0;
+display:flex;
+flex-direction:row-reverse;
+justify-content:space-around;
+margin-top:20px;
 }
+
 header.primary nav ul{
   list-style-type:none;
 }
 
+header.primary nav ul a{
+  color:#ffff;
+  background-color:#82b0d9;
+  padding:5px 7.5px;
+  border-radius:20px 10px;
+  text-decoration:none;
+  background-color:rgba(5,5,5,.1);
+  font-size:.9rem;
+  transition:.7s;
+}
+
+header.primary nav a:hover{
+    background-color:rgba(5,5,5,.8);
+}
+
+
+
+
+
+
+/*----------------Media Quaries-------*/
+@media screen and (max-width: 600px){
+
+  header.primary nav ul{
+flex-direction:column;
+gap:20px;
+}
+
+
+header.primary anv ul a{
+  display:block;
+}
+
+.container{
+background-color:transparent;
+width:90vw;
+margin-left:20px auto;
+}
+
+}
 /* --- Color Combo --- */ 
 /*
 .WEB-TECH-1-hex { color: #568EBF; }
