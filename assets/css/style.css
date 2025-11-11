@@ -1,5 +1,99 @@
-/* Course Homepage CSS */ 
+/*-----Course Homepage CSS-----*/ 
 
+/*-----General Styling-----*/
+body {
+/*-----Font-----*/
+font-family: "Delius", cursive;
+/*-----Background-----*/
+background-color: #fdfaf7; /* Soft Cream Base */
+color: #4a4a4a;
+margin: 0;
+padding: 0;
+text-align: center;
+opacity: 0;
+animation: fadeIn 1s ease forwards;
+}
+
+/*-----Header Banner-----*/
+header{
+    background: linear-gradient(135deg, #f9e2e7, #e8e8ff, #d8f3dc);
+    padding: 60px 20px;
+    border-bottom: 2px solid #e3dff8;
+    box-shadow: 0 2px 6px rgba(150,150,200,0.15);
+}
+
+/*-----Header Styling-----*/
+h1{
+    font-size: 2.5rem;
+    margin-top: 60px;
+    color: #5b5b8c; /* Soft Dusty Lavendar */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(180,180,200,0.4);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover{
+    color: #a5b4fc; /* Pastel Indigo */
+    transform: scale(1.03);
+}
+
+/*-----Navigation Menu-----*/
+nav {
+    margin-top: 40px;
+    background-color: #F6F1FF; /* Soft Pastel Lilac */
+    padding: 20px 0;
+    border-top: 2px solid #e1dcf9; 
+    border-bottom: 2px solid #e1dcf9;
+    box-shadow: 0 2px 6px rgba(160,160,200,0.15);
+}
+
+/*-----List Styling-----*/
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    display:inline-block;
+    margin: 0 20px;
+}
+
+/*-----Link Styling-----*/
+nav a{
+    text-decoration: none;
+    color: #6c5b7b; /* Dusty Purple */
+    font-size: 1.1rem;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+nav a:hover{
+    color:white;
+    background-color: #cdb4db; /* Light Pastel Violet */
+    padding: 6px 14px;
+}
+
+/*-----Subtle Fade-In Animation-----*/
 body{
-    background-color:rgb(236, 198, 238);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*-----Mobile Responsive Adjustments-----*/
+@media (max-width: 600px) {
+    h1{
+        font-size:2rem;
+    }
+
+    nav li{
+        display:block;
+        margin: 10px 0;
+    }
 }
