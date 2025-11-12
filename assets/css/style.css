@@ -31,7 +31,6 @@ h1{
     text-shadow: 1px 1px 3px rgba(180,180,200,0.4);
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 h1:hover{
     color: #a5b4fc; /* Pastel Indigo */
     transform: scale(1.03);
@@ -53,7 +52,6 @@ nav ul{
     padding: 0;
     margin: 0;
 }
-
 nav li{
     display:inline-block;
     margin: 0 20px;
@@ -68,7 +66,6 @@ nav a{
     padding: 6px 10px;
     border-radius: 10px;
 }
-
 nav a:hover{
     color:white;
     background-color: #cdb4db; /* Light Pastel Violet */
@@ -80,10 +77,156 @@ body{
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
-
 @keyframes fadeIn {
     from{opacity: 0;}
     to {opacity: 1;}
+}
+
+/*-----Positioning Labs Section-----*/
+.positioning-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    width:85%;
+    margin:60px auto;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/*-----Left Banner-----*/
+.lab-banner{
+    flex:1 1 320px;
+    background:linear-gradient(135deg, #f9f7ff, #e8f0ff, #fce8f8);
+    border-radius:25px;
+    padding:40px;
+    border:2px solid #e3dff8;
+    box-shadow:0 4px 10px rgba(160,160,200,0.1);
+    text-align:left;
+    animation:fadeIn 1s ease forwards;
+}
+.lab-banner h2{
+    font-size:2rem;
+    font-weight:bold;
+    color:#6c5b7b;
+    margin-bottom:20px;
+    text-align:center;
+    text-shadow:1px 1px 2px rbga(180,180,200,0.3);
+}
+.lab-banner ul{
+    text-align:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.lab-banner li{
+    margin-bottom:10px;
+}
+.lab-banner a{
+    text-decoration:none;
+    color:#5b5b8c;
+    font-size:1.1rem;
+    transition:color 0.3s ease, background-color 0.3s ease;
+    padding:6px 12px;
+    border-radius:10px;
+}
+.lab-banner a:hover{
+    color:white;
+    background-color:#cdb4db;
+}
+
+/*-----The List of Links-----*/
+.lab-text ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.lab-text li{
+    margin-bottom:10px;
+}
+.lab-text a{
+    text-decoration:none;
+    color:#5b5b8c;
+    font-size:1.1rem;
+    transition:color 0.3s ease, background-color 0.3s ease;
+    padding:6px 12px;
+    border-radius: 10px;
+}
+.lab-text a:hover{
+    color:white;
+    background-color:#cdb4db;
+}
+
+/*-----Right Side Images-----*/
+.images-right{
+    display:flex;
+    align-items:left;
+    justify-content:flex-end;
+    gap:20px; /*---Space between rectangle and stacked squares---*/
+    flex:1;
+}
+.flower-img{
+    width:300px; /*---make it a bit longer---*/
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.square-stack{
+    display:flex;
+    flex-direction:column;
+    gap:15px; /*---space between stacked squares---*/
+}
+.square-stack img{
+    width:200px; /*---slightly bigger squares---*/
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*-----Hover Animation for Images-----*/
+.flower-img, .square-stack img{
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.flower-img:hover, .square-stack img:hover{
+    transform:scale(1.05);
+    box-shadow:0 6px 14px rgba(150,180,255,0.3);
+}
+.rectangle-img, .square-stack img{
+    border:2px solid rgba(200,210,255,0.4);
+}
+
+/*-----Divider Section-----*/
+.divider{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin:80px auto 40px auto;
+    text-align:center;
+    font-size:1.1rem;
+    color:#6c5b7b; /* Dusty Purple */
+    opacity:0;
+    animation:fadeIn 1.5s ease forwards;
+}
+.divider p{
+    margin:10px 0;
+    background:linear-gradient(90deg,#eec2cc, #a9a9de, #b2e4b9);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+.divider-line{
+    width:80%;
+    height:2px;
+    background:linear-gradient(90deg, #fce8f8, #e1dcf9, #f9f7ff);
+    border-radius:50px;
+    box-shadow:0 0 6px rgba(200,180,255,0.2);
+    margin:10px 0;
+    transition:width 0.6s ease;
+}
+.divider:hover .divider-line{
+    width:90%;
 }
 
 /*-----Mobile Responsive Adjustments-----*/
@@ -95,5 +238,20 @@ body{
     nav li{
         display:block;
         margin: 10px 0;
+    }
+}
+/*-----Responsive Adjustment-----*/
+@media (max-width: 800px) {
+    .positioning-section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .purple-images{
+        text-align:center;
+        margin-top:20px;
+    }
+    .purple-images img{
+        max-width: 120px;
     }
 }
