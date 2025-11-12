@@ -240,6 +240,7 @@ body{
         margin: 10px 0;
     }
 }
+
 /*-----Responsive Adjustment-----*/
 @media (max-width: 800px) {
     .positioning-section{
