@@ -47,6 +47,11 @@ img{
 /*----------------Global Styles------------------*/
 body{
   font-family: "Inconsolata", monospace;
+  margin:0;
+  line-height:1.5;
+  /* puts an image as the background
+  background-image: url("")
+  */
 }
 
 header.primary{
@@ -166,6 +171,19 @@ margin:0;
 #practice a:hover{
   text-decoration:none;
 }
+/* Puts image as background */
+/*
+#practice{
+  background-image: url("../img/");
+  /* Background doesn't repeat 
+  background-repeat:none;
+  /* Stretches out the background 
+  background-size: cover;
+  /* Makes sure the image fits the background 
+  background-size: contain;
+}
+  */
+
 
 #practice h3{
   border-left:5px solid #568EBF;
@@ -196,6 +214,11 @@ margin:0;
   text-align:right;
 }
 
+/* Multi Selector */
+#practice td:nth-child(2), #practice td:nth-child(3){
+
+}
+
 #practice th{
   background-color:#F2E7AC;
   padding:6px;
@@ -206,7 +229,40 @@ margin:0;
   padding:3px;
 }
 
+#practice ol{
+  list-style-type:lower-roman;
+}
 
+#practice ul ul{
+  color:#9CC1D9;
+}
+
+#practice dt{
+  font-weight:bold;
+}
+dd + dt {
+  margin-top:20px;
+}
+#practice dd{
+  margin-left:0;
+}
+
+#practice blockquote{
+  border: 4px double #1570c0;
+  padding:20px 40px;
+  margin:30px 50px;
+  border-radius: 40px 0;
+  background-color:#7db0d2;
+  color:white;
+  text-shadow:1px 1px #000;
+} 
+
+#practice blockquote cite{
+  display:block;
+  font-size:.8rem;
+  text-align:right;
+  margin-top:10px;
+}
 /*
 #practice p{
   line-height:1.5;
@@ -271,6 +327,10 @@ header.primary anv ul a{
 background-color:transparent;
 width:100%;
 margin-left:20px auto;
+}
+
+#content{
+flex-direction:column;
 }
 
 }
