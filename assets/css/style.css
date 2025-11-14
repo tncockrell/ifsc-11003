@@ -82,41 +82,53 @@ body{
     to {opacity: 1;}
 }
 
-/*-----Positioning Labs Section-----*/
-.positioning-section{
+
+/*-----Container for both Labs + Images-----*/
+.labs-section{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    width:85%;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
     margin:60px auto;
-    gap:30px;
+    gap:40px; /*--More Space between left and right columns--*/
     flex-wrap:wrap;
 }
-
-/*-----Left Banner-----*/
-.lab-banner{
-    flex:1 1 320px;
-    background:linear-gradient(135deg, #f9f7ff, #e8f0ff, #fce8f8);
-    border-radius:25px;
-    padding:40px;
-    border:2px solid #e3dff8;
-    box-shadow:0 4px 10px rgba(160,160,200,0.1);
-    text-align:left;
-    animation:fadeIn 1s ease forwards;
+/*-----Left Column: Both Labs Stacked-----*/
+.labs-left{
+    flex:1 1 400px; /*--make it flexiible--*/
+    display:flex;
+    flex-direction: column;
+    gap:30px; /*--space between positioning labs and grid labs--*/
 }
+/*-----Lab Banners-----*/
+.lab-banner {
+    background:linear-gradient(135deg, #fef9ff,#e8f0ff,#fdf0f8);
+    border-radius: 20px;
+    padding:30px 25px;
+    border:1px solid #e3dff8;
+    box-shadow:0 6px 15px rgba(160,160,200,0.08);
+    text-align:left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lab-banner:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(160,160,200,0.15);
+}
+/*-----Lab Headings-----*/
 .lab-banner h2{
-    font-size:2rem;
+    font-size: 1.9rem;
     font-weight:bold;
     color:#6c5b7b;
-    margin-bottom:20px;
+    margin-bottom:15px;
     text-align:center;
-    text-shadow:1px 1px 2px rbga(180,180,200,0.3);
+    text-shadow:1px 1px 2px rgba(180,180,200,0.2);
 }
+/*-----Lab Links-----*/
 .lab-banner ul{
-    text-align:center;
     list-style:none;
     padding:0;
     margin:0;
+    text-align:center;
 }
 .lab-banner li{
     margin-bottom:10px;
@@ -125,64 +137,44 @@ body{
     text-decoration:none;
     color:#5b5b8c;
     font-size:1.1rem;
-    transition:color 0.3s ease, background-color 0.3s ease;
     padding:6px 12px;
     border-radius:10px;
+    transition:all 0.3s ease;
 }
 .lab-banner a:hover{
     color:white;
     background-color:#cdb4db;
 }
-
-/*-----The List of Links-----*/
-.lab-text ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-.lab-text li{
-    margin-bottom:10px;
-}
-.lab-text a{
-    text-decoration:none;
-    color:#5b5b8c;
-    font-size:1.1rem;
-    transition:color 0.3s ease, background-color 0.3s ease;
-    padding:6px 12px;
-    border-radius: 10px;
-}
-.lab-text a:hover{
-    color:white;
-    background-color:#cdb4db;
-}
-
-/*-----Right Side Images-----*/
+/*-----Right Column Images-----*/
 .images-right{
     display:flex;
-    align-items:left;
+    align-items:flex-start;
     justify-content:flex-end;
-    gap:20px; /*---Space between rectangle and stacked squares---*/
-    flex:1;
+    gap:20px;
+    flex:0 0 320px;
 }
+/*-----Flower Image-----*/
 .flower-img{
-    width:300px; /*---make it a bit longer---*/
+    width:300px;
     height:auto;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.88);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
+/*-----Stacked Square Images-----*/
 .square-stack{
     display:flex;
-    flex-direction:column;
-    gap:15px; /*---space between stacked squares---*/
+    flex-direction: column;
+    gap:15px;
 }
 .square-stack img{
-    width:200px; /*---slightly bigger squares---*/
+    width:200px;
     height:200px;
     object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.88);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 /*-----Hover Animation for Images-----*/
 .flower-img, .square-stack img{
     transition:transform 0.3s ease, box-shadow 0.3s ease;
@@ -194,7 +186,6 @@ body{
 .rectangle-img, .square-stack img{
     border:2px solid rgba(200,210,255,0.4);
 }
-
 /*-----Divider Section-----*/
 .divider{
     display:flex;
@@ -242,17 +233,25 @@ body{
 }
 
 /*-----Responsive Adjustment-----*/
-@media (max-width: 800px) {
-    .positioning-section{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+@media (max-width: 900px) {
+    .labs-section{
+        flex-direction:column;
+        align-items:center;
+        gap:40px;
     }
-    .purple-images{
-        text-align:center;
-        margin-top:20px;
+    .labs-left{
+        width:100% 
     }
-    .purple-images img{
-        max-width: 120px;
+    .images-right{
+        flex:none;
+        width:100%;
+        justify-content: center;
+    }
+    .flower-img{
+        width:250px;
+    }
+    .square-stack img{
+        width:180px;
+        height:180px;
     }
 }
