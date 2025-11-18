@@ -219,6 +219,61 @@ body{
 .divider:hover .divider-line{
     width:90%;
 }
+/*------Narrio-----*/
+.final-project-banner {
+    background:linear-gradient(135deg, #fff0f5, #e0e8ff, #f0fff4);
+    border-radius:20px;
+    padding:30px 25px;
+    border:1px solid #e3dff8;
+    box-shadow: 0 6px 15px rgba(160,160,200,0.08);
+    text-align:center;
+    margin-top:40px;
+    position:relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*-----Hover effect for banner-----*/
+.final-project-banner:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(160,160,200,0.15);
+}
+/*-----Banner Heading-----*/
+.final-project-banner h2{
+    font-size:1.9rem;
+    font-weight:bold;
+    color:#6c5b7b;
+    margin-bottom:15px;
+    text-shadow:1px 1px 2px rgba(180,180,200,0.2);
+    position:relative;
+}
+/*-----Banner List Styling-----*/
+.final-project-banner ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.final-project-banner li{
+    margin-bottom:10px;
+}
+/*-----Link/Button Styling-----*/
+.final-project-banner a{
+    display:inline-block;
+    text-decoration: none;
+    color:#5b5b8c;
+    font-size:1.1rem;
+    padding:10px 20px;
+    border-radius:12px;
+    background-color:#f6f1ff;
+    box-shadow:0 4px 10px rgba(160,160,200, 0.1);
+    transition: all 0.3s ease;
+}
+/*-----Hover Effect for the Button-----*/
+.final-project-banner a:hover{
+    color:white;
+    background-color:#cdb4db;
+    transform:scale(1.05);
+}
+
+
 
 /*-----Mobile Responsive Adjustments-----*/
 @media (max-width: 600px) {
