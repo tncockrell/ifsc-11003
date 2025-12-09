@@ -1,0 +1,163 @@
+/*  ---------------Box Sizing-----------------  */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* GENERAL PAGE STYLE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.tagline {
+    margin-top: 5px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav a {
+    color: #9dc2ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HERO IMAGE */
+.hero {
+    width: 100%;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 3px solid #0055ff;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    margin: 0;
+    color: #003bb5;
+}
+
+/* FAQ STYLING */
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #ddd;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #7bb3ff;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #111;
+    color: #f0f0f0;
+}
+
+.dark-mode header {
+    background: #000;
+}
+
+.dark-mode footer {
+    background: #000;
+}
+
+.dark-mode nav a {
+    color: #7bb3ff;
+}
+#toggleDark {
+    padding: 8px 12px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+#toggleDark:hover {
+    background: #444;
+}
+
+.dark-mode #toggleDark {
+    background: #ddd;
+    color: #000;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero {
+        border-radius: 6px;
+    }
+}
